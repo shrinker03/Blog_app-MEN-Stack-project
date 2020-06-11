@@ -1,0 +1,208 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+
+i .icon{
+    font-size: 2em;
+}
+.container.main{
+    font-family: 'Playfair Display', serif;
+    margin-top: 7.0em;
+}
+
+body{
+    font-family: 'Playfair Display', serif;
+    padding: 30px;
+    background: #7F7FD5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#delete{
+    display: inline;
+}
+
+#login{
+    width: 350px;
+    /*height: 550px;*/
+    box-shadow: 2px 2px 5px;
+    text-align: center;
+    margin: 5px auto 5px auto;
+    border-radius: 20px;
+}
+
+
+#login-1{
+    width: 350px;
+    box-shadow: 2px 2px 5px;
+    text-align: center;
+    margin: 5px auto 5px auto;
+    border-radius: 20px;
+}
+
+
+@media (max-width: 600px) {
+        #login.container{
+        margin: 30px auto;
+        width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+        #login-1.container{
+        margin: 30px auto;
+        width: 300px;
+    }
+}
+
+
+.ui.purple.basic.button{
+    margin: 20px auto 20px 10px;
+}
+
+
+
+body #login{
+    font-family: 'Playfair Display', serif;
+    margin-top: 100px;
+    padding: 10px;
+    background: #ebf6f7;
+}
+
+body #login-1{
+    font-family: 'Playfair Display', serif;
+    margin-top: 100px;
+    padding: 10px;
+    background: #ebf6f7;
+}
+
+
+.container .text{
+    margin-bottom:35px;
+}
+
+.field{
+    height: 50px;
+    width: 100%;
+    
+}
+
+.field input{
+    border-radius: 8px;
+    padding-left: 4px;
+    height: 70%;
+    width: 70%;
+    
+}
+
+.up{
+    margin-top:20px;
+    height: 50px;
+}
+
+.sign{
+    margin-top:10px;
+    height: 70px;
+}
+
+.field1{
+    margin:10px;
+}
+
+div.contentDate{
+    margin: 10px auto 10px auto;
+    font-weight: bold;
+}
+
+div .description p{
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    div.ui.fixed.stackable.inverted.menu{
+        position: relative;
+        top: auto;
+        max-height: none;
+    }
+    body {
+        margin: 0;
+    }
+}
+
+div.ui.main.text.container.segment-1{
+    height: 200px;
+}
+
+
+div.ui.main.text.container.segment-1 img{
+    width: 160px;
+    height: 200px;
+}
+
+
+@media (max-width: 767px) {
+    div.ui.main.text.container.segment-1{
+        height: 300px;
+    }
+    
+    
+    div.ui.main.text.container.segment-1 img{
+        width: 160px;
+        margin-left: 2px;
+    }
+}
+
+div.ui.main.text.container.segment{
+    background: #ebf6f7;
+}
+
+
+@media (max-width: 767px) {
+    div.ui.main.text.container.segment{
+        background: #ebf6f7;
+    }
+    
+}
+
+
+@media (max-width: 600px) {
+    div#main-text-container-1{
+        margin-top: 50px;
+        width: 400px;
+    }
+}
+
+div.ui.top.attached.segment{
+    background: #ebf6f7;
+    
+}
+
+@media (max-width: 600px) {
+        div.ui.top.attached.segment{
+            background: #ebf6f7;
+            width: 500px;
+            margin: 0 auto;
+            /*padding: 20px;*/
+        }
+        
+}
+
+@media (max-width: 768px) {
+    div.extra{
+                text-align: center;
+            
+            }
+
+}
+#hr1{
+    width: 680px;
+}
+
+.img{
+    width: 300px;
+}
+
+img.ui.centered.rounded.image{
+    width: 300px;
+}

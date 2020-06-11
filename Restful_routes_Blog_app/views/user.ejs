@@ -1,0 +1,54 @@
+<%- include("./partials/header.ejs") %>
+
+
+<div class="ui main text container segment-1">
+    <div class="ui huge header"><%= user.username %><img class="float-right" src="<%= user.avatar %>" alt="User Profile Image"></div>
+    <div class="mb-1">
+        <%= user.firstName %>
+        <%= user.lastName %>
+    </div>
+    <p class="text-muted">Bestfolios is a gallery featuring the best portfolios and resumes from top UI/UX designers, graphic designers and motion designers.</p>
+    <div class="mt-1">
+        <a class="m" href=#><% function randomNumber(min, max) {  
+            return Math.floor(Math.random() * (max - min) + min); 
+        }  
+         %> <%= randomNumber(1, 12) %>k Followers</a>
+        <a class="ml-2" href=#><%= randomNumber(1, 100) %> Following</a>
+    </div>
+</div>
+<hr id="hr1">
+<div class="container">
+    <div class="ui main text container">
+    
+        <div class="ui huge header text-center">Users Blogs</div>
+            <div class="ui top attached segment"> 
+                <div class="ui divided items">
+                    <% blogs.forEach(function(blog){ %>
+                        <div class="item">
+                            <div class="image">
+                                <img src="<%= blog.image %>">
+                            </div>
+                            <div class="content">
+                                <a class="header" href="/blogs/<%= blog._id %>"><%= blog.title %></a>
+                                <div class="meta">
+                                    <span><%= moment(blog.createdAt).format('LL') %></span>
+                                </div>
+                                <div class="description">
+                                    <p><%= blog.body.substr(0,300) %>......</p>
+                                </div>
+                                <div class="extra">
+                                    <a class="ui floated basic violet button" href="/blogs/<%= blog._id %>">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>    
+    </div>
+</div>
+
+
+
+
+
+<%- include("./partials/footer.ejs") %>

@@ -1,0 +1,23 @@
+<%- include("../partials/header.ejs") %>
+<div style="width: 30%" class="ui main text container segment">
+    <div style="text-align: center;" class="ui huge header">
+        Edit Comment 
+        
+    </div>
+    
+    <form class="ui form" action="/blogs/<%= blog_id %>/comments/<%= comment._id %>" method="POST">
+        <div class="field1">
+            <label>Text</label>
+            <input type="text" name="comment[text]" value = "<%= comment.text %>">
+        </div>
+        <!--<div class="field1">-->
+        <!--    <label>Author</label>-->
+        <!--    <input type="text" name="comment[author]" placeholder="author">-->
+        <!--</div>-->
+        <input  type="submit" class="ui purple basic button">
+    </form>
+</div>
+
+
+
+<%- include("../partials/footer.ejs") %>

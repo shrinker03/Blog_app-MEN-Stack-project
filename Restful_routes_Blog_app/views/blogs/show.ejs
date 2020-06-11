@@ -1,0 +1,62 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header text-center"><%= blog.title %></div>
+    <hr>
+    <div class="ui top attached ">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%= blog.image %>"><img >
+            <hr>
+            <div class="contentDate">
+                <span><%= moment(blog.createdAt).format('LL') %></span>
+            </div>
+            <div class="description">
+                <p><%= blog.body %></p>
+            </div>
+                
+                <em>Submitted by: <Strong><a href="/users/<%= blog.author.id %>"><%= blog.author.username %></a></Strong></em>
+                <br>
+                <% if(currentUser && blog.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                    <a class="ui orange basic button" href="/blogs/<%= blog._id %>/edit">EDIT</a>
+                    <form id="delete" action="/blogs/<%= blog._id %>?_method=DELETE" method="POST">
+                        <button class="ui red basic button">DELETE</button>
+                    </form>
+                <% } %>
+            
+            <br>
+        
+            <hr>
+            
+            
+            <div style="float: right">
+                <a class="ui green basic button" href="/blogs/<%= blog._id %>/comments/new">Add New Comment</a>
+            </div>
+            <br>
+            <br>
+            
+            <% blog.comments.forEach(function(comment){ %>
+                <div>
+                    <a href="/users/<%= blog.author.id %>"><img class="mr-1" src="https://img.icons8.com/android/18/000000/user.png"/><strong><%= comment.author.username %></strong></a> 
+                </div>
+                <span style="float: right"><%= moment(comment.createdAt).fromNow()  %></span>
+                <p class="mt-2">
+                     <%= comment.text %>
+                </p>
+                <% if(currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                      <a class="small ui basic orange  button" href="/blogs/<%= blog._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                      <form id = "delete" action="/blogs/<%= blog._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                          <input type="submit" class="small ui red basic button" value="Delete">
+                      </form>
+                      
+                <% } %> 
+                <hr>
+            <%  }) %>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+<%- include("../partials/footer.ejs") %>
